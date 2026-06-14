@@ -6,12 +6,29 @@ Procesa el manifiesto diario de reservas y genera un Excel con tres pestañas (A
 
 | Archivo | Descripción |
 |---------|-------------|
-| [`GAMEPLAN_MACRO_FINAL_2026.bas`](./GAMEPLAN_MACRO_FINAL_2026.bas) | Macro VBA completa para procesar reservas |
+| [`gameplan_reservas.py`](./gameplan_reservas.py) | **Versión Python** (recomendada) — script con openpyxl |
+| [`GAMEPLAN_MACRO_FINAL_2026.bas`](./GAMEPLAN_MACRO_FINAL_2026.bas) | Macro VBA original para procesar reservas |
 | [`prompt_ia_gameplan.md`](./prompt_ia_gameplan.md) | Prompt para procesar el mismo reporte con Claude (alternativa IA) |
+
+## Cómo usar (Python)
+
+```bash
+pip install openpyxl
+python3 gameplan_reservas.py manifiesto.xlsx GamePlan_Procesado.xlsx
+```
+
+## Cómo usar (VBA)
+
+1. Abrí el archivo Excel fuente (ResManifest_.xlsx)
+2. Presioná `Alt + F11` → Editor de VBA
+3. Insertar → Módulo
+4. Pegá el código de `GAMEPLAN_MACRO_FINAL_2026.bas`
+5. Cerra el editor
+6. Presioná `Alt + F8`, seleccioná `ProcesarReservas` → Ejecutar
 
 ## ¿Qué hace?
 
-1. Lee el manifiesto desde la hoja "Sheet"
+1. Lee el manifiesto desde la hoja activa
 2. Clasifica cada reserva por marca según la ubicación de recogida:
    - **Alamo** → SJOE71 / SJOT71
    - **Enterprise** → SJOC61 / SJOT61
@@ -25,15 +42,6 @@ Procesa el manifiesto diario de reservas y genera un Excel con tres pestañas (A
 6. Calcula indicadores:
    - **Columna ****: `I`/`P`/`E` para clientes con `+`, `⭐FL⭐` para `~`/`*`, combinaciones como `⭐I-FL⭐`
    - **Columna MAIN VIP**: `* MAIN VIP*` o `* EXPEDIA*` según ubicación o agencia
-
-## Cómo usar la macro VBA
-
-1. Abrí el archivo Excel fuente (ResManifest_.xlsx)
-2. Presioná `Alt + F11` → Editor de VBA
-3. Insertar → Módulo
-4. Pegá el código de `GAMEPLAN_MACRO_FINAL_2026.bas`
-5. Cerra el editor
-6. Presioná `Alt + F8`, seleccioná `ProcesarReservas` → Ejecutar
 
 ## Resultado
 

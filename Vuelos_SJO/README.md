@@ -2,11 +2,28 @@
 
 Procesa datos de vuelos del Aeropuerto Juan Santamaría, filtra vuelos internacionales excluyendo rutas domésticas y ciertas aerolíneas, y genera un reporte organizado por bloques horarios.
 
-## Archivo
+## Archivos
 
 | Archivo | Descripción |
 |---------|-------------|
-| [`VUELOS_MACRO_REPORTE.bas`](./VUELOS_MACRO_REPORTE.bas) | Macro VBA para generar reporte de vuelos internacionales |
+| [`vuelos_sjo.py`](./vuelos_sjo.py) | **Versión Python** (recomendada) — script con openpyxl |
+| [`VUELOS_MACRO_REPORTE.bas`](./VUELOS_MACRO_REPORTE.bas) | Macro VBA original |
+
+## Cómo usar (Python)
+
+```bash
+pip install openpyxl
+python3 vuelos_sjo.py vuelos.xlsx Reporte_Vuelos_SJO.xlsx
+```
+
+## Cómo usar (VBA)
+
+1. Copiá los datos de FlightRadar24 en una hoja de Excel
+2. Presioná `Alt + F11` → Editor de VBA
+3. Insertar → Módulo
+4. Pegá el código de `VUELOS_MACRO_REPORTE.bas`
+5. Cerra el editor
+6. Presioná `Alt + F8`, seleccioná `GenerarReporteVuelos` → Ejecutar
 
 ## ¿Qué hace?
 
@@ -21,15 +38,6 @@ Procesa datos de vuelos del Aeropuerto Juan Santamaría, filtra vuelos internaci
    - Encabezados con colores corporativos
    - Filas alternadas (zebra striping)
    - Bloques horarios con separadores visuales
-
-## Cómo usar
-
-1. Copiá los datos de FlightRadar24 en una hoja de Excel
-2. Presioná `Alt + F11` → Editor de VBA
-3. Insertar → Módulo
-4. Pegá el código de `VUELOS_MACRO_REPORTE.bas`
-5. Cerra el editor
-6. Presioná `Alt + F8`, seleccioná `GenerarReporteVuelos` → Ejecutar
 
 ## Resultado
 
