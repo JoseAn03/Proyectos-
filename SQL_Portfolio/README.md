@@ -1,7 +1,6 @@
 # SQL Portfolio — Rent a Car Reservation System
 
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=flat&logo=mysql&logoColor=white)](https://dev.mysql.com/)
-[![DB Fiddle](https://img.shields.io/badge/Try%20Online-DB%20Fiddle-F37626?style=flat)](https://dbfiddle.uk/)
 
 **SQL queries for daily reservation management, No-Show analysis, and executive reporting** at Enterprise Holdings — processing **500+ daily reservations** across Alamo, Enterprise, and National at Juan Santamaria International Airport (SJO).
 
@@ -88,9 +87,6 @@ mysql -u root -p < portfolio_completo.sql
 mysql -u root -p < 01_creacion_tablas_reservas.sql
 mysql -u root -p < 02_analisis_reservas_diarias.sql
 ```
-
-### Online Environment
-For quick testing without local setup, use [dbfiddle.uk](https://dbfiddle.uk/) (select MySQL 8.0) and paste `portfolio_completo.sql`.
 
 > **Note:** `portfolio_completo.sql` includes schema, 200+ sample reservation records, and all queries in a single file for immediate execution.
 
