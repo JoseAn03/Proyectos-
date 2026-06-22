@@ -1,11 +1,11 @@
-# Data Analytics Portfolio — Enterprise Holdings
+# Data Analyst Portfolio — Enterprise Holdings
 
 <p align="center">
   <img src="./assets/workflow_diagram.png" alt="Data Pipeline Workflow" width="800">
 </p>
 
 <p align="center">
-  <strong>Data Pipeline & Business Intelligence</strong><br>
+  <strong>Data Analyst Portfolio</strong><br>
   Juan Santamaria International Airport (SJO) · Costa Rica
 </p>
 
