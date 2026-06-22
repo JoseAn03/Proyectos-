@@ -7,6 +7,7 @@ Portafolio de proyectos de análisis de datos y automatización desarrollados en
 | Proyecto | Descripción |
 |----------|-------------|
 | [**Power BI**](./PowerBI_Dashboard/) | Dashboard de análisis de reservas con datos reales, DAX y visuales |
+| [**SQL Portfolio**](./SQL_Portfolio/) | Scripts SQL para creación de tablas, Game Plan diario, análisis de No Show, reportes ejecutivos |
 | [**GamePlan Reservas**](./GamePlan_Reservas/) | Automatización del reporte diario Game Plan (Alamo/Enterprise/National) con Python y VBA |
 | [**NoShow Reporte**](./NoShow_Reporte/) | Macro para generar reporte de No Show con formato y colores por marca |
 | [**Vuelos SJO**](./Vuelos_SJO/) | Análisis y reporte de vuelos internacionales filtrados por bloques horarios |
