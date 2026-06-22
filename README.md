@@ -51,12 +51,12 @@ Portfolio of real-world data analysis and automation projects developed at **Ent
 
 | Category | Technologies |
 |----------|-------------|
-| **Languages** | Python, SQL, VBA (Excel Macros) |
-| **Libraries** | openpyxl, pandas, matplotlib, numpy |
-| **Databases** | MySQL 8.0, MariaDB |
-| **BI & Visualization** | Power BI Desktop, DAX, Power Query |
-| **Automation** | Excel VBA, Python scripting, Batch processing |
-| **Version Control** | Git, GitHub |
+| Languages | Python, SQL, VBA (Excel Macros) |
+| Libraries | openpyxl, pandas, matplotlib, numpy |
+| Databases | MySQL 8.0, MariaDB |
+| BI & Visualization | Power BI Desktop, DAX, Power Query |
+| Automation | Excel VBA, Python scripting, Batch processing |
+| Version Control | Git, GitHub |
 
 ---
 
