@@ -84,17 +84,17 @@ ORDER BY m.nombre_marca, r.nombre_cliente;
 
 ---
 
-## Quick Start
+## Getting Started
 
-Each project has its own README with setup instructions. For the SQL portfolio specifically:
+Each project folder contains its own README with detailed setup and usage instructions.
+
+**Quick example** — run the complete SQL portfolio locally:
 
 ```bash
-# Option 1: Online (no install)
-# Go to https://dbfiddle.uk/ → MySQL 8.0 → paste portfolio_completo.sql
-
-# Option 2: Local MySQL
 mysql -u root -p < SQL_Portfolio/portfolio_completo.sql
 ```
+
+Explore each project's README for Python, VBA, and Power BI setup guides.
 
 ---
 

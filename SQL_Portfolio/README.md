@@ -75,29 +75,28 @@
 +-------+--------------+----------+------+---------------+---------+--------------+
 ```
 
-## Quick Start
+## Getting Started
 
-### Option 1: Online (recommended)
-1. Go to **[https://dbfiddle.uk/](https://dbfiddle.uk/)**
-2. Select **MySQL 8.0**
-3. Paste the contents of `portfolio_completo.sql`
-4. Run the setup, then execute each query section individually
+All queries can be executed in any MySQL 8.0+ or MariaDB environment. The `portfolio_completo.sql` file is a self-contained script that creates the schema, inserts sample data, and runs all analytical queries.
 
-### Option 2: Local MySQL
+### Local Environment
 ```bash
+# Execute the complete portfolio
 mysql -u root -p < portfolio_completo.sql
-```
 
-### Option 3: Individual scripts
-```bash
-# Create schema first
+# Or run scripts individually
 mysql -u root -p < 01_creacion_tablas_reservas.sql
-
-# Then run any analysis script
 mysql -u root -p < 02_analisis_reservas_diarias.sql
 ```
 
-> **Note:** `portfolio_completo.sql` includes everything — schema, sample data, and all queries in one file.
+### Online Environment
+For quick testing without local setup, use [dbfiddle.uk](https://dbfiddle.uk/) (select MySQL 8.0) and paste `portfolio_completo.sql`.
+
+> **Note:** `portfolio_completo.sql` includes schema, 200+ sample reservation records, and all queries in a single file for immediate execution.
+
+### Requirements
+- MySQL 8.0+ or MariaDB 10.5+
+- No external dependencies — pure SQL
 
 ## Key SQL Concepts Used
 
