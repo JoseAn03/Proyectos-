@@ -1,48 +1,72 @@
-# 📋 GamePlan Reservas — Automatización de Reporte Diario
+# GamePlan Reservas — Daily Reservation Processing
 
-Procesa el manifiesto diario de reservas y genera un Excel con tres pestañas (Alamo, Enterprise, National), ordenado alfabéticamente por nombre del cliente, con formato condicional por marca y colores.
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
+[![openpyxl](https://img.shields.io/badge/openpyxl-Excel%20Automation-217346?style=flat&logo=microsoftexcel&logoColor=white)](https://openpyxl.readthedocs.io/)
+[![VBA](https://img.shields.io/badge/VBA-Macro-217346?style=flat&logo=microsoftexcel&logoColor=white)]()
 
-## Archivos
+Automates the daily **Game Plan** report — processes the reservation manifest and generates a formatted Excel workbook with three brand tabs (Alamo, Enterprise, National), alphabetically sorted with conditional formatting.
 
-| Archivo | Descripción |
-|---------|-------------|
-| [`gameplan_reservas.py`](./gameplan_reservas.py) | **Versión Python** (recomendada) — script con openpyxl |
-| [`GAMEPLAN_MACRO_FINAL_2026.bas`](./GAMEPLAN_MACRO_FINAL_2026.bas) | Macro VBA original para procesar reservas |
-| [`prompt_ia_gameplan.md`](./prompt_ia_gameplan.md) | Prompt para procesar el mismo reporte con Claude (alternativa IA) |
+## Problem
 
-## Cómo usar (Python)
+Processing 500+ daily reservations manually across 3 brands took **2+ hours** of copy-paste, sorting, and formatting. This script reduces it to **~15 minutes**.
+
+## Solution
+
+### Python Script (Recommended)
 
 ```bash
 pip install openpyxl
 python3 gameplan_reservas.py manifiesto.xlsx GamePlan_Procesado.xlsx
 ```
 
-## Cómo usar (VBA)
+### VBA Macro (Legacy)
 
-1. Abrí el archivo Excel fuente (ResManifest_.xlsx)
-2. Presioná `Alt + F11` → Editor de VBA
-3. Insertar → Módulo
-4. Pegá el código de `GAMEPLAN_MACRO_FINAL_2026.bas`
-5. Cerra el editor
-6. Presioná `Alt + F8`, seleccioná `ProcesarReservas` → Ejecutar
+1. Open the source Excel file (ResManifest_.xlsx)
+2. Press `Alt + F11` → Insert → Module
+3. Paste code from `GAMEPLAN_MACRO_FINAL_2026.bas`
+4. Close editor → press `Alt + F8` → Run `ProcesarReservas`
 
-## ¿Qué hace?
+## What It Does
 
-1. Lee el manifiesto desde la hoja activa
-2. Clasifica cada reserva por marca según la ubicación de recogida:
-   - **Alamo** → SJOE71 / SJOT71
-   - **Enterprise** → SJOC61 / SJOT61
-   - **National** → SJOE01 / SJOT01
-3. Ordena alfabéticamente por nombre del cliente
-4. Agrupa por letra inicial (A-Z) con bordes y formato
-5. Aplica colores:
-   - 🔵 Alamo → azul
-   - ⚫ Enterprise → negro
-   - 🟢 National → verde
-6. Calcula indicadores:
-   - **Columna ****: `I`/`P`/`E` para clientes con `+`, `⭐FL⭐` para `~`/`*`, combinaciones como `⭐I-FL⭐`
-   - **Columna MAIN VIP**: `* MAIN VIP*` o `* EXPEDIA*` según ubicación o agencia
+| Step | Description |
+|------|-------------|
+| **1. Read** | Reads the manifest from the active sheet |
+| **2. Classify** | Splits by brand based on pickup location codes: |
+| | - **Alamo** → SJOE71 / SJOT71 |
+| | - **Enterprise** → SJOC61 / SJOT61 |
+| | - **National** → SJOE01 / SJOT01 |
+| **3. Sort** | Alphabetically by customer name |
+| **4. Group** | A-Z letter grouping with borders and format |
+| **5. Format** | Brand colors on names, indicators in ** column |
+| **6. Flags** | MAIN VIP / EXPEDIA detection |
 
-## Resultado
+## Output Format
 
-📊 Excel con 3 pestañas (ALAMO, ENTERPRISE, NATIONAL), cada una con 13 columnas formateadas y listas para usar.
+| Column | Content |
+|--------|---------|
+| A: Letra | Letter A-Z (first row of each group) — red bold |
+| B: N. Reserva | Reservation number |
+| C: Marca | `ALAMO//` / `ENTERPRISE//` / `NATIONAL//` |
+| D: ** | `I`/`P`/`E`, `FL`, or combos like `I-FL` |
+| E: Nombre | Customer name — brand colored |
+| F: Clase | Vehicle class |
+| G: **MAIN VIP** | `* MAIN VIP*` or `* EXPEDIA*` indicators |
+| H-K: Dates/Locations | Pickup/dropoff dates and locations |
+| L: Tarifa Diaria | Daily rate |
+| M: Agencia de recom. | Referral agency |
+
+## Files
+
+| File | Description |
+|------|-------------|
+| [`gameplan_reservas.py`](./gameplan_reservas.py) | **Python version** (recommended) — full automation with openpyxl |
+| [`GAMEPLAN_MACRO_FINAL_2026.bas`](./GAMEPLAN_MACRO_FINAL_2026.bas) | VBA macro — legacy Excel automation |
+| [`prompt_ia_gameplan.md`](./prompt_ia_gameplan.md) | AI prompt — alternative Claude-assisted processing |
+
+## Tech Stack
+
+- **Python 3.x** with openpyxl library
+- **VBA** for legacy Excel automation
+- **Conditional Formatting** by brand
+- **String Analysis** for VIP/Expedia detection
+- **Alphanumeric Sorting** with A-Z grouping
