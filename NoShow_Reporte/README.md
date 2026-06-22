@@ -1,46 +1,35 @@
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Excel](https://img.shields.io/badge/Excel-VBA%20Macros-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)]()
+
 # NoShow Reporte — Daily No-Show Analysis
 
-[![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
-[![openpyxl](https://img.shields.io/badge/openpyxl-Excel%20Automation-217346?style=flat&logo=microsoftexcel&logoColor=white)]()
+Automated No-Show report generation — processes active reservations, identifies no-show patterns, and produces a formatted report organized by brand with alphabetical grouping.
 
-Automated No-Show report generation — processes active reservations, identifies No-Show patterns, and generates a formatted report organized alphabetically by brand.
+## The Problem
 
-## Problem
+No-Show tracking was non-existent. There was no automated way to identify customer no-shows or analyze patterns across brands.
 
-No-Show tracking was non-existent. There was no automated way to identify which customers didn't show up, making it impossible to analyze patterns or calculate revenue loss.
+## The Solution
 
-## Solution
+Python and VBA scripts that automate daily No-Show reporting with brand classification, VIP detection, and conditional formatting.
 
 ### Python Script (Recommended)
-
 ```bash
 pip install openpyxl
 python3 noshow_reporte.py manifiesto.xlsx NoShow_Reporte.xlsx
 ```
 
 ### VBA Macro (Legacy)
-
-1. Open source Excel → `Alt + F11` → Insert → Module
-2. Paste code from `NOSHOW_MACRO.bas`
-3. Close → `Alt + F8` → Run `GenerarResManifest`
+Open Excel → `Alt + F11` → Insert Module → Paste code → `Alt + F8` → Run
 
 ## Features
-
-- **Brand Classification:** Splits reservations by pickup location (Alamo/Enterprise/National)
-- **Alphabetical Sorting:** A-Z by customer name within each brand
-- **Conditional Formatting:** Brand colors, letter grouping, VIP indicators
-- **Executive Summary:** No-Show rates and patterns at a glance
+- **Brand Classification** by pickup location codes
+- **Alphabetical Sorting** A-Z by customer name
+- **Conditional Formatting** with brand-specific colors
+- **VIP/Expedia Detection** with visual indicators
 
 ## Files
-
 | File | Description |
 |------|-------------|
-| [`noshow_reporte.py`](./noshow_reporte.py) | **Python version** (recommended) |
-| [`NOSHOW_MACRO.bas`](./NOSHOW_MACRO.bas) | VBA macro — legacy version |
-
-## Tech Stack
-
-- **Python 3.x** with openpyxl
-- **VBA** for legacy automation
-- **Conditional Formatting** by brand
-- **Data Classification** by location codes
+| `noshow_reporte.py` | Python automation script (recommended) |
+| `NOSHOW_MACRO.bas` | VBA macro (legacy) |
