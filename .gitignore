@@ -1,6 +1,18 @@
-# ⭐FL⭐
-*.pyc
+# Python
 __pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Excel
+*.xls
+*.xlsx
+
+# Power BI
+*.pbix
+
+# OS
 .DS_Store
 Thumbs.db
-.vscode/

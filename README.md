@@ -5,7 +5,13 @@
 </p>
 
 <p align="center">
-  <strong>Data Analyst Portfolio</strong><br>
+  <img src="https://img.shields.io/badge/Status-Active-success?style=flat-square" alt="Status">
+  <img src="https://img.shields.io/badge/Location-SJO%20Costa%20Rica-0077B6?style=flat-square" alt="Location">
+  <img src="https://img.shields.io/github/last-commit/JoseAn03/Proyectos-?style=flat-square&color=blueviolet" alt="Last Commit">
+</p>
+
+<p align="center">
+  <strong>Data Analyst Portfolio — Deployed at Enterprise Holdings (Alamo · Enterprise · National)</strong><br>
   Juan Santamaria International Airport (SJO) · Costa Rica
 </p>
 
@@ -18,49 +24,48 @@
 
 ---
 
-## Overview
+## 📊 Executive Summary
 
-Portfolio of real-world data analysis and automation projects developed at **Enterprise Holdings** (Alamo, Enterprise, National) at SJO Airport. These tools process **500+ daily reservations**, automate operational reports, analyze No-Show patterns, and generate executive dashboards — turning **2+ hours of manual work into 15 minutes** of automated processing.
+Production-grade analytics and automation tools built for **Enterprise Holdings** at SJO's rental operations. These systems process **500+ daily reservations**, automate operational reports, analyze No-Show patterns, and generate executive dashboards — turning **2+ hours of manual work into 15 minutes** of automated processing.
 
 ### Key Results
 
 | Metric | Before | After | Improvement |
 |--------|--------|-------|-------------|
-| Daily Game Plan | 2 hours manual | 15 min automated | 87.5% faster |
-| Reservations processed/day | Manual copy-paste | 500+ automated | Fully automated |
-| Brand consolidation | 3 separate files | 1 file, 3 tabs | Unified |
-| No-Show analysis | Did not exist | Daily automated report | New capability |
-| Executive reporting | Game Plan only | Full BI dashboard | Enhanced |
+| Daily Game Plan | 2 hours manual | 15 min automated | **87.5% faster** |
+| Reservations processed/day | Manual copy-paste | 500+ automated | **Fully automated** |
+| Brand consolidation | 3 separate files | 1 file, 3 tabs | **Unified** |
+| No-Show analysis | Did not exist | Daily automated report | **New capability** |
+| Executive reporting | Game Plan only | Full BI dashboard | **Enhanced** |
 
 ---
 
-## Projects
+## 📁 Project Modules
 
 | Project | Description | Stack |
 |---------|-------------|-------|
-| [**SQL Portfolio**](./SQL_Portfolio/) | Database schema, Game Plan queries, No-Show analysis, executive reporting | `MySQL` `CTEs` |
-| [**GamePlan Reservas**](./GamePlan_Reservas/) | Automated daily processing to 3-tab Excel (Alamo/Enterprise/National) | `Python` `VBA` |
-| [**NoShow Reporte**](./NoShow_Reporte/) | Automated No-Show report with brand grouping and conditional formatting | `Python` `VBA` |
+| [**SQL Portfolio**](./SQL_Portfolio/) | Full database schema, Game Plan queries, No-Show analysis | `MySQL` `CTEs` |
+| [**GamePlan Reservas**](./GamePlan_Reservas/) | Automated daily → 3-tab Excel (Alamo/Enterprise/National) | `Python` `VBA` |
+| [**NoShow Reporte**](./NoShow_Reporte/) | No-Show analysis with brand grouping & conditional formatting | `Python` `VBA` |
 | [**Power BI Dashboard**](./PowerBI_Dashboard/) | 4-page interactive dashboard with DAX measures and KPIs | `DAX` `Power Query` |
-| [**Vuelos SJO**](./Vuelos_SJO/) | International flight processing and hourly block categorization | `Python` `VBA` |
+| [**Vuelos SJO**](./Vuelos_SJO/) | International flight processing & hourly block categorization | `Python` `VBA` |
 | [**Guias**](./Guias/) | Documentation and AI prompts for report automation | `Prompt Engineering` |
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Category | Technologies |
 |----------|-------------|
-| Languages | Python, SQL, VBA (Excel Macros) |
-| Libraries | openpyxl, pandas, matplotlib, numpy |
-| Databases | MySQL 8.0, MariaDB |
-| BI & Visualization | Power BI Desktop, DAX, Power Query |
-| Automation | Excel VBA, Python scripting, Batch processing |
-| Version Control | Git, GitHub |
+| **Languages** | Python, SQL, VBA (Excel Macros) |
+| **Libraries** | openpyxl, pandas, matplotlib, numpy |
+| **Databases** | MySQL 8.0, MariaDB |
+| **BI & Visualization** | Power BI Desktop, DAX, Power Query |
+| **Automation** | Excel VBA, Python scripting, Batch processing |
 
 ---
 
-## Sample SQL Query
+## 🔍 Sample Query: Daily Brand Game Plan
 
 ```sql
 SELECT 
@@ -82,7 +87,7 @@ ORDER BY m.nombre_marca, r.nombre_cliente;
 
 ---
 
-## Getting Started
+## 🚀 Quick Start
 
 Each project folder contains detailed setup and usage instructions.
 
@@ -93,13 +98,13 @@ mysql -u root -p < SQL_Portfolio/portfolio_completo.sql
 
 ---
 
-## Author
+## 👤 Author
 
-**Jose Andres Sequeira Hernandez**  
-Data Analyst · Business Intelligence  
+**José Andrés Sequeira Hernández**  
+📊 Data Analyst · Business Intelligence  
 
-[chomita0317@gmail.com](mailto:chomita0317@gmail.com)  
-[LinkedIn](https://linkedin.com/in/joseandres-sequeira-hernandez-3aaa03285) · [GitHub](https://github.com/JoseAn03)
+📧 [chomita0317@gmail.com](mailto:chomita0317@gmail.com)  
+🔗 [LinkedIn](https://linkedin.com/in/jose-andres-sequeira-hernandez-3aaa03285) · [GitHub](https://github.com/JoseAn03)
 
 ---
 
